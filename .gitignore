@@ -1,1 +1,11 @@
-/film.mp3
+# Local media library for the built-in player
+/film.mp3/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
