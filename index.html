@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARKNEX_TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="hero">
+    <nav class="topbar">
+      <div class="logo">DARKNEX_TV</div>
+      <div class="topbar-links">
+        <a href="#catalog">Каталог</a>
+        <a href="#genres">Жанры</a>
+        <a href="#chat">Чат</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Фильмы, аниме и мультфильмы в одном месте</p>
+        <h1>Найди, что посмотреть за пару секунд</h1>
+        <p class="hero-text">
+          Удобный поиск, отдельные списки по категориям и дружелюбный чат-помощник снизу страницы,
+          который подскажет, что выбрать на вечер.
+        </p>
+
+        <form class="search-panel" id="searchForm">
+          <label class="search-label" for="searchInput">Поиск по названию, жанру или категории</label>
+          <div class="search-row">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Например: аниме или Тайна Коко"
+              autocomplete="off"
+            >
+            <button type="submit">Найти</button>
+          </div>
+        </form>
+
+        <div class="hero-tags">
+          <span>Фильмы</span>
+          <span>Аниме</span>
+          <span>Мультфильмы</span>
+          <span>Фантастика</span>
+          <span>Семейные</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="hero-card-title">Сегодня в тренде</p>
+        <div class="hero-feature">
+          <span class="badge">Аниме</span>
+          <h2>Унесённые призраками</h2>
+          <p>Волшебное приключение, которое любят и дети, и взрослые.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="genres genres-four" id="genres">
+      <article>
+        <h3>Кино</h3>
+        <p>Боевики, фантастика, драма, комедия и культовые хиты.</p>
+      </article>
+      <article>
+        <h3>Списки</h3>
+        <p>Каталог теперь разделён по категориям, чтобы было проще искать нужное.</p>
+      </article>
+      <article>
+        <h3>Аниме</h3>
+        <p>Эмоциональные истории, яркие миры и любимые герои.</p>
+      </article>
+      <article>
+        <h3>Мультфильмы</h3>
+        <p>Тёплые семейные истории и красочная анимация для всех.</p>
+      </article>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2>Отдельные списки для каждого жанра</h2>
+        </div>
+        <div class="section-actions">
+          <p class="results-text" id="resultsText">Показаны все карточки</p>
+          <button type="button" class="ghost-button" id="downloadCatalogButton">Скачать каталог</button>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Marvel</p>
+          <h2>Все части Человека-паука подряд</h2>
+        </div>
+        <p class="results-text">Смотри первую часть и просто листай вниз к следующей</p>
+      </div>
+      <div class="search-panel">
+        <label class="search-label">Подсказка</label>
+        <p class="results-text">
+          Все 4 части теперь собраны в одной карточке. Просто выбери нужную часть внутри карточки
+          и нажми "Смотреть".
+        </p>
+      </div>
+
+      <div class="catalog-group" data-group>
+        <div class="catalog-group-head">
+          <p class="eyebrow">Фильмы</p>
+          <h3>Список фильмов</h3>
+        </div>
+        <div class="cards">
+          <article class="card collection-card" data-collection="spider-man" data-title="Человек-паук" data-category="кино" data-genre="фантастика боевик приключения marvel" data-description="История о Питере Паркере, который получает суперсилы и становится героем Нью-Йорка." data-year="2002" data-duration="121 мин" data-rating="Фильм" data-video="Chelovek_Pauk_2002_720-kinovasek.net.mp4" data-quality="720p">
+            <div class="card-poster poster-film"></div>
+            <div class="card-body">
+              <span class="badge">Кино</span>
+              <h3 class="collection-title">Человек-паук</h3>
+              <p class="collection-description">История о Питере Паркере, который получает суперсилы и становится героем Нью-Йорка.</p>
+              <div class="part-selector">
+                <span class="part-selector-label">Выбери часть:</span>
+                <div class="part-buttons">
+                  <button type="button" class="part-button active" data-part="0">Человек-паук</button>
+                  <button type="button" class="part-button" data-part="1">Человек-паук 2</button>
+                  <button type="button" class="part-button" data-part="2">Человек-паук 3</button>
+                  <button type="button" class="part-button" data-part="3">Высокое напряжение</button>
+                </div>
+              </div>
+              <div class="card-meta">
+                <span class="collection-genre">Боевик</span>
+                <span class="collection-year">2002</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Побег из Шоушенка" data-category="кино" data-genre="драма криминал" data-description="История о надежде, дружбе и силе духа в стенах тюрьмы Шоушенк." data-year="1994" data-duration="142 мин" data-rating="Фильм" data-video="Pobeg_iz_Shoushenka_1994_kinosimka.biz.mp4" data-quality="Исходное качество">
+            <div class="card-poster poster-inception"></div>
+            <div class="card-body">
+              <span class="badge">Кино</span>
+              <h3>Побег из Шоушенка</h3>
+              <p>История о надежде, дружбе и силе духа в стенах тюрьмы Шоушенк.</p>
+              <div class="card-meta">
+                <span>Драма</span>
+                <span>1994</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Аватар" data-category="кино" data-genre="фантастика приключения боевик" data-description="Эпическое путешествие на Пандору, где человек сталкивается с новым миром и меняет свою судьбу." data-year="2009" data-duration="162 мин" data-rating="Фильм" data-video="Avatar_2009_720_kinosimka.pro.mp4" data-quality="720p">
+            <div class="card-poster poster-series"></div>
+            <div class="card-body">
+              <span class="badge">Кино</span>
+              <h3>Аватар</h3>
+              <p>Эпическое путешествие на Пандору, где человек сталкивается с новым миром и меняет свою судьбу.</p>
+              <div class="card-meta">
+                <span>Фантастика</span>
+                <span>2009</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Аватар: Путь воды" data-category="кино" data-genre="фантастика приключения боевик" data-description="Возвращение на Пандору, где Джейк Салли и его семья защищают свой дом и учатся жить среди новых морских кланов." data-year="2022" data-duration="192 мин" data-rating="Фильм" data-video="Аватар__Дорога_воды.mp4" data-quality="Исходное качество">
+            <div class="card-poster poster-water"></div>
+            <div class="card-body">
+              <span class="badge">Кино</span>
+              <h3>Аватар: Путь воды</h3>
+              <p>Возвращение на Пандору, где Джейк Салли и его семья защищают свой дом и учатся жить среди новых морских кланов.</p>
+              <div class="card-meta">
+                <span>Фантастика</span>
+                <span>2022</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog-group" data-group>
+        <div class="catalog-group-head">
+          <p class="eyebrow">Аниме</p>
+          <h3>Список аниме</h3>
+        </div>
+        <div class="cards">
+          <article class="card" data-title="Унесённые призраками" data-category="аниме" data-genre="фэнтези приключения семейный" data-description="Волшебная история о девочке Тихиро, которая попадает в загадочный мир духов." data-year="2001" data-duration="125 мин" data-rating="8.6 IMDb" data-video="Unesennye_prizrakami_2001_720-kinovasek.net.mp4" data-quality="720p">
+            <div class="card-poster poster-anime"></div>
+            <div class="card-body">
+              <span class="badge">Аниме</span>
+              <h3>Унесённые призраками</h3>
+              <p>Волшебная история о девочке Тихиро, которая попадает в загадочный мир духов.</p>
+              <div class="card-meta">
+                <span>Фэнтези</span>
+                <span>2001</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Твоё имя" data-category="аниме" data-genre="романтика драма фантастика" data-description="Трогательная история о двух подростках, чьи судьбы неожиданно переплетаются." data-year="2016" data-duration="106 мин" data-rating="8.4 IMDb">
+            <div class="card-poster poster-name"></div>
+            <div class="card-body">
+              <span class="badge">Аниме</span>
+              <h3>Твоё имя</h3>
+              <p>Трогательная история о двух подростках, чьи судьбы неожиданно переплетаются.</p>
+              <div class="card-meta">
+                <span>Романтика</span>
+                <span>2016</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog-group" data-group>
+        <div class="catalog-group-head">
+          <p class="eyebrow">Мультфильмы</p>
+          <h3>Список мультфильмов</h3>
+        </div>
+        <div class="cards">
+          <article class="card" data-title="Холодное сердце" data-category="мультфильм" data-genre="семейный музыка приключения" data-description="Музыкальное приключение о смелости, семье и настоящей любви." data-year="2013" data-duration="102 мин" data-rating="7.4 IMDb">
+            <div class="card-poster poster-frozen"></div>
+            <div class="card-body">
+              <span class="badge">Мультфильм</span>
+              <h3>Холодное сердце</h3>
+              <p>Музыкальное приключение о смелости, семье и настоящей любви.</p>
+              <div class="card-meta">
+                <span>Семейный</span>
+                <span>7.4 IMDb</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-title="Тайна Коко" data-category="мультфильм" data-genre="семейный приключения музыка" data-description="Тёплая история о мечте, музыке и ценности семьи." data-year="2017" data-duration="105 мин" data-rating="8.4 IMDb">
+            <div class="card-poster poster-coco"></div>
+            <div class="card-body">
+              <span class="badge">Мультфильм</span>
+              <h3>Тайна Коко</h3>
+              <p>Тёплая история о мечте, музыке и ценности семьи.</p>
+              <div class="card-meta">
+                <span>Приключения</span>
+                <span>8.4 IMDb</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" class="watch-button">Смотреть</button>
+                <button type="button" class="ghost-button download-button">Скачать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="chat-section" id="chat">
+    <div class="chat-box">
+      <div class="chat-header">
+        <div>
+          <p class="eyebrow">Чат-помощник</p>
+          <h2>Спросите, что посмотреть</h2>
+        </div>
+        <span class="chat-status" id="chatStatus">онлайн</span>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="message assistant">
+          Привет! Напиши, что тебе нравится: кино, аниме, мультфильмы, фантастика или что-то семейное.
+        </div>
+      </div>
+
+      <form class="chat-form" id="chatForm">
+        <input
+          id="chatInput"
+          type="text"
+          placeholder="Например: посоветуй аниме на вечер"
+          autocomplete="off"
+        >
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="modal hidden" id="watchModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="closeModalButton">×</button>
+      <div class="modal-player" id="modalPlayer">
+        <div class="screen-glow"></div>
+        <div class="screen-copy">
+          <p class="eyebrow">Режим просмотра</p>
+          <h2 id="modalTitle">Название появится после выбора карточки</h2>
+          <p id="modalDescription">Описание тоже можно заменить после того, как вы добавите свои видео.</p>
+        </div>
+        <video class="modal-video hidden" id="modalVideo" controls playsinline preload="metadata">
+          <source id="modalVideoSource" src="" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+      <div class="modal-details">
+        <span id="modalCategory">Категория</span>
+        <span id="modalYear">Год</span>
+        <span id="modalDuration">Длительность</span>
+        <span id="modalRating">Рейтинг</span>
+      </div>
+      <div class="quality-panel">
+        <label for="qualitySelect">Качество видео</label>
+        <div class="quality-buttons" id="qualityButtons"></div>
+        <select id="qualitySelect">
+          <option value="">Исходное качество</option>
+        </select>
+      </div>
+      <div class="player-toolbar">
+        <p class="player-status" id="playerStatus">Выбери карточку с видео, и фильм откроется прямо на сайте.</p>
+        <div class="player-toolbar-actions">
+          <button type="button" class="ghost-button player-toolbar-button" id="fullscreenButton">Во весь экран</button>
+          <button type="button" class="ghost-button player-toolbar-button" id="pipButton">Картинка в картинке</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
